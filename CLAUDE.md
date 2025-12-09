@@ -4,7 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## プロジェクト概要
 
-GitHub Issues + GitHub Projects を使ったタスク管理システム。Claude Codeがタスクの作成・選択・実行を支援する。
+GitHub Issues + GitHub Projects を使ったタスク管理システムの**テンプレートリポジトリ**。
+
+このリポジトリをフォークまたはコピーして、自分のプロジェクトに適用してください。
+設定ファイル（`.claude/task-config.json`）で管理対象のリポジトリと Project を指定できます。
+
+Claude Codeがタスクの作成・選択・実行を支援する。
 
 ## 設定ファイル
 
@@ -106,9 +111,9 @@ gh pr create --repo "$REPO" --title "feat: 機能説明 (#42)" --body "Closes #4
 
 | フィールド | タイプ | 値 |
 |-----------|--------|-----|
-| Status | Single Select | Backlog, Ready, In Progress, Done |
+| Status | Single Select | Backlog, Ready, In Progress, In review, Done |
 | Priority | Single Select | High, Medium, Low |
-| Due date | Date | 日付 |
+| Target date | Date | 日付（期限） |
 | Estimate | Number | 時間（1, 2, 4, 8, 16 など） |
 
 ## 初期設定
