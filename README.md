@@ -33,10 +33,9 @@ claude
 
 **重要**: GitHub UIからカンバンテンプレートを使用してProjectを作成してください。
 
-1. GitHubにアクセス: https://github.com
-2. 右上の「+」ボタン → 「New project」を選択
-3. 「Board」（カンバン）テンプレートを選択
-4. Project名を入力（例: "Task Management"）して作成
+1. https://github.com にアクセスし、右上の「+」ボタン → 「New project」を選択
+2. 「Board」（カンバン）テンプレートを選択
+3. Project名を入力（例: "Task Management"）して作成
 
 > CLIではなくUIで作成する理由: カンバンテンプレートならStatus選択肢やビューが最初から設定済みのため
 
