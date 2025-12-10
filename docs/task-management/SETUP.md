@@ -37,10 +37,9 @@ gh repo clone {your-username}/{your-repo}
 
 ### 手順
 
-1. GitHubにアクセス: https://github.com
-2. 右上の「+」ボタン → 「New project」を選択
-3. 「Board」（カンバン）テンプレートを選択
-4. Project名を入力（例: "Task Management"）して作成
+1. https://github.com にアクセスし、右上の「+」ボタン → 「New project」を選択
+2. 「Board」（カンバン）テンプレートを選択
+3. Project名を入力（例: "Task Management"）して作成
 
 ### Project番号の確認
 
