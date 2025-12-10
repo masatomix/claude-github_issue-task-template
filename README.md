@@ -4,26 +4,32 @@ GitHub Issues + GitHub Projects を使ったタスク管理システム。Claude
 
 ## クイックスタート
 
-### 1. リポジトリをクローン
+### 1. テンプレートから自分のリポジトリを作成
+
+1. [このリポジトリ](https://github.com/masatomix/claude-github_issue-task-template)にアクセス
+2. 右上の緑色「**Use this template**」ボタン → 「Create a new repository」を選択
+3. リポジトリ名を入力して「Create repository」をクリック
+
+### 2. 作成したリポジトリをクローン
 
 ```bash
 git clone https://github.com/{your-username}/{your-repo}.git
 cd {your-repo}
 ```
 
-### 2. GitHub CLI の認証（未認証の場合）
+### 3. GitHub CLI の認証（未認証の場合）
 
 ```bash
 gh auth login
 ```
 
-### 3. Claude Code を起動
+### 4. Claude Code を起動
 
 ```bash
 claude
 ```
 
-### 4. GitHub Project の作成（GitHub UIで実施）
+### 5. GitHub Project の作成（GitHub UIで実施）
 
 **重要**: GitHub UIからカンバンテンプレートを使用してProjectを作成してください。
 
@@ -34,7 +40,7 @@ claude
 
 > CLIではなくUIで作成する理由: カンバンテンプレートならStatus選択肢やビューが最初から設定済みのため
 
-### 5. Claude Code に初期設定を依頼
+### 6. Claude Code に初期設定を依頼
 
 Claude Code に「タスク管理の初期設定をして」と伝えてください。以下を対話的に設定してくれます：
 
@@ -42,7 +48,7 @@ Claude Code に「タスク管理の初期設定をして」と伝えてくだ�
 - 追加Projectフィールドの作成（Priority, Due date, Estimate）
 - ラベルの作成
 
-### 6. タスク管理開始
+### 7. タスク管理開始
 
 初期設定が完了したら、Claude Code に話しかけてタスク管理を始めましょう：
 
