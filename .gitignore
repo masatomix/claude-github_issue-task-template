@@ -6,3 +6,9 @@ ai_instructions.md
 
 # タスク管理設定（リポジトリ固有の設定）
 .claude/task-config.json
+
+# GitHub App設定（Private Key含む）
+.claude/config/
+
+# Windows Zone.Identifierファイル
+*:Zone.Identifier
