@@ -81,11 +81,14 @@ gh project item-list $PROJECT_NUMBER --owner "$OWNER" --format json --limit 100
 
 1. Statusを「In Progress」に変更
 2. featureブランチ作成: `feature/{issue番号}-{短い説明}`
-3. 調査・設計が必要な場合: `docs/research/{issue番号}_{タスク名}/` フォルダ作成
+3. 成果物フォルダ作成（必要な場合）:
+   - **調査・設計**: `docs/research/{issue番号}_{タスク名}/`
+   - **アプリ開発**: `docs/app/{issue番号}_{タスク名}/`
 
 ```bash
 git checkout -b feature/42-add-user-auth
-mkdir -p docs/research/42_add-user-auth  # 必要な場合のみ
+mkdir -p docs/research/42_add-user-auth  # 調査・設計の場合
+mkdir -p docs/app/42_add-user-auth       # アプリ開発の場合
 ```
 
 ## タスク完了
