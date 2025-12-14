@@ -2,6 +2,37 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+---
+
+## ⚠️ 最重要ルール: GitFlow 厳守
+
+**すべての変更（コード、ドキュメント問わず）は以下の手順を守ること:**
+
+1. **作業開始前に必ずブランチを作成**
+2. ブランチ上で作業・コミット
+3. PRを作成してマージ
+
+### ブランチ命名規則
+- `feature/{issue番号}-{説明}` - 新機能、タスク対応
+- `hotfix/{説明}` - 軽微な修正、緊急対応
+
+```bash
+# ❌ 絶対禁止
+git commit  # mainブランチで直接コミット
+git push origin main
+
+# ✅ 正しい手順
+git checkout -b feature/{issue番号}-{説明}  # または hotfix/{説明}
+# ... 作業 ...
+git add . && git commit -m "..."
+git push -u origin {ブランチ名}
+gh pr create ...
+```
+
+**mainブランチへの直接コミット・プッシュは禁止。必ずブランチ経由でPRを作成すること。**
+
+---
+
 ## プロジェクト概要
 
 GitHub Issues + GitHub Projects を使ったタスク管理システムの**テンプレートリポジトリ**。
@@ -79,14 +110,17 @@ gh project item-list $PROJECT_NUMBER --owner "$OWNER" --format json --limit 100
 
 ## タスク着手
 
-1. Statusを「In Progress」に変更
-2. featureブランチ作成: `feature/{issue番号}-{短い説明}`
+1. **最初にfeatureブランチを作成**: `feature/{issue番号}-{短い説明}`
+2. Statusを「In Progress」に変更
 3. 成果物フォルダ作成（必要な場合）:
    - **調査・設計**: `docs/research/{issue番号}_{タスク名}/`
    - **アプリ開発**: `docs/app/{issue番号}_{タスク名}/`
 
 ```bash
+# 1. まずブランチ作成（これを忘れない！）
 git checkout -b feature/42-add-user-auth
+
+# 2. 必要に応じてフォルダ作成
 mkdir -p docs/research/42_add-user-auth  # 調査・設計の場合
 mkdir -p docs/app/42_add-user-auth       # アプリ開発の場合
 ```
